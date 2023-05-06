@@ -15,7 +15,6 @@ const room = document.getElementById('select_room')
 const roomRoot = createRoot(room);
 roomRoot.render(<Room />);
 
-
 const date = document.getElementById('selectDate')
 const dateRoot = createRoot(date);
 dateRoot.render(<Date />);

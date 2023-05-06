@@ -32,7 +32,13 @@ class Tower extends React.Component {
     }
 }
 function ToFloor() {
-    const arr_floors = ['', 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+    const arr_floors = ['']
+    let i = 3;
+    while (i <= 27) {
+        arr_floors.push(i);
+        i++;
+    }
+
     const [value, setValue] = useState('');
     const options = arr_floors.map((text, index) => {
         return <option value={text} key={index}>{text}</option>;
@@ -63,7 +69,12 @@ class Floor extends React.Component {
 }
 
 function ToRoom() {
-    const arr_rooms = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const arr_rooms = [''];
+    let i = 1;
+    while (i <= 10) {
+        arr_rooms.push(i);
+        i++;
+    }
     const [value, setValue] = useState('');
     const options = arr_rooms.map((text, index) => {
         return <option value={text} key={index}>{text}</option>;

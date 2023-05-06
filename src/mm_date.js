@@ -1,3 +1,11 @@
+// корректировка формата вывода
+const correct_data = (day) => {
+    if (day < 10)
+        return '0' + day;
+    else
+        return day;
+}
+
 // вычисление минимально возможной даты для календаря
 const min_date = () => {
     let today = new Date();
@@ -5,12 +13,9 @@ const min_date = () => {
     let month = today.getMonth() + 1;
     let year = today.getFullYear();
 
-    if (day < 10) {
-        day ='0' + day;
-    }
-    if (month < 10) {
-        month = '0' + month;
-    }
+    day = correct_data(day);
+    month = correct_data(month);
+
     today = year + '-' + month + '-' + day;
 
     return today;
@@ -19,31 +24,54 @@ const min_date = () => {
 // вычисление максимально возможной даты для календаря
 const max_date = () => {
     let max_day = new Date();
-    let day = max_day.getDate();
+    let m_day = max_day.getDate();
     let max_month = max_day.getMonth() + 1;
     let year = max_day.getFullYear();
 
     // перед увеличением текущего месяца проверим его номер, для 3-х месяцев надо изменять номер вручную
-    const max_m = (max_month) => {
-        return max_month + 3 - 12;
+    const month_days = (max_month) => {
+        let num = 0;
+        switch (max_month){
+            case 1:
+            case 3:
+            case '5':
+            case 7:
+            case 9:
+            case 10:
+            case 12:
+                num = 31;
+                break;
+            case 4:
+            case 6:
+            case 8:
+            case 11:
+                num = 30;
+                break;
+            case 2:
+                num = 28;
+                break;
+            default:
+                num = max_month;
+        }
+        return num;
     }
 
-    if (max_month >= 10) {
-        max_month = max_m(max_month);   // корректируем месяц
-        year += 1;                      // корректируем год
+    const days_in_month = month_days();
+
+    // перед увеличением текущей даты проверим на корректность данные,
+    // для последних дней в месяце надо изменять дату вручную
+    if (m_day > (days_in_month - 4)) {
+        m_day = m_day + 5 - days_in_month;
+        max_month += 1;
     }
     else {
-        max_month += 3;
+        m_day += 4;
     }
 
-    if (day < 10) {
-        day ='0' + day;
-    }
+    m_day = correct_data(m_day);
+    max_month = correct_data(max_month);
 
-    if (max_month < 10) {
-        max_month = '0' + max_month;
-    }
-    max_day = year + '-' + max_month + '-' + day;
+    max_day = year + '-' + max_month + '-' + m_day;
 
     return max_day;
 }
