@@ -94,7 +94,7 @@ button:hover {
     background-color: rgb(49, 49, 157);
 }
 
-select, #select_date {
+select, .select_date {
     width: 120px;
     height: 30px;
     text-align: center;
@@ -104,7 +104,7 @@ select, #select_date {
     margin: 0;
 }
 
-#select_date {
+.select_date {
     width: 118px;
     height: 28px;
     font-family: 'Montserrat', sans-serif;
