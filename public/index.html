@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>React App</title>
+  </head>
+  <body>
+    <script></script>
+    <div id="root"></div>
+    <div id="to_tower"></div>
+    <form id="form">
+      <div class = "app">
+        <p class="name_of_form" >Бронирование переговорной</p>
+        <div class="tower wrapper">
+          <div class="content1" id="frt">
+            <label for="select_tower">Выберите башню</label>
+          </div>
+
+          <div class="content">
+            <select name="select_tower" id="tower" required="required">
+              <option value=""></option>
+              <option value="А">A</option>
+              <option value="Б">Б</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="floor wrapper">
+          <div class="content1">
+            <label for="select_floor">Выберите этаж</label>
+          </div>
+
+          <div class="content">
+            <select name="select_floor" required="required">
+              <option value=""></option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="room wrapper">
+          <div class="content1">
+            <label for="select_room">Выберите переговорную</label>
+          </div>
+
+          <div class="content">
+            <select name="select_room" id="room" required="required">
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="date wrapper">
+          <div class="content1">
+            <label for="select_date">Выберите дату</label>
+          </div>
+
+          <div class="content">
+            <input type="date" id="select_date" name="select_date" required="required">
+          </div>
+        </div>
+
+        <div class="time wrapper">
+          <div class="content1">
+            <label for="select_time">Выберите время</label>
+          </div>
+
+          <div class="content">
+            <select name="select_time" id="time" required="required">
+              <option value=""></option>
+              <option value="10.00-11.00">10.00 - 11.00</option>
+              <option value="11.00-12.00">11.00 - 12.00</option>
+              <option value="12.00-13.00">12.00 - 13.00</option>
+              <option value="14.00-15.00">14.00 - 15.00</option>
+              <option value="15.00-16.00">15.00 - 16.00</option>
+              <option value="16.00-17.00">16.00 - 17.00</option>
+              <option value="17.00-18.00">17.00 - 18.00</option>
+              <option value="18.00-19.00">18.00 - 19.00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="comment wrapper">
+          <div class="comment_content">
+            <label for="comment">Комментарий</label>
+          </div>
+
+          <div class="comment_content">
+            <textarea name="comment" id="comm" cols="28" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="buttons wrapper">
+          <div class="button">
+            <button class="send">Отправить</button>
+          </div>
+          <div class="button">
+            <button class="clear">Очистить</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>

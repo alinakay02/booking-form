@@ -1,0 +1,36 @@
+/*адаптация под мобильную версию*/
+@media (max-width: 480px) {
+    .app {
+        height: 900px;
+        min-width: 260px;
+        max-width: 360px;
+        align-items: center;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        flex: 1 40px;
+    }
+
+    .content {
+        flex: 1 50px;
+    }
+
+    .content1 {
+        justify-content: space-around;
+        padding-left: 0;
+    }
+
+    .tower:hover, .floor:hover, .room:hover, .date:hover, .time:hover {
+        background-color: rgb(49, 49, 157);
+        width: fit-content;
+    }
+
+    .comment_content {
+        margin-bottom: 9px;
+    }
+
+    .button {
+        flex: 1 60px;
+    }
+}

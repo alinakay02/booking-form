@@ -1,0 +1,138 @@
+.app {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #6464e3;
+    color: white;
+    border-radius: 25px;
+    border: 1px solid rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px black;
+    margin-top: 7vh;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper {
+    display: flex;
+    padding: 8px 0 8px 0;
+}
+
+.content {
+    display: flex;
+    flex: 1 120px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.content1 {
+    display: flex;
+    width: 200px;
+    padding-left: 50px;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.comment {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.comment_content {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.button {
+    flex: 1 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+div {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background-color: rgb(250, 249, 250);
+    color: rgb(3, 3, 3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 0.5rem;
+    margin: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(248, 82, 136);
+    color: white;
+}
+
+.tower:hover, .floor:hover, .room:hover, .date:hover, .time:hover {
+    background-color: rgb(49, 49, 157);
+}
+
+select, #select_date {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    margin: 0;
+}
+
+#select_date {
+    width: 118px;
+    height: 28px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.name_of_form {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 21px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+}
+
+p {
+    margin: 4px 0;
+}
+
+body {
+    background-color: #c5c5ef;
+}
+
