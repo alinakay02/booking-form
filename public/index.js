@@ -81,10 +81,13 @@ function actions(event) {
     }
 }
 
+// ищет все совпадения по ключу [key]
 function found_booked(new_info, current_booked, key) {
     return current_booked.filter(e => e[key] === new_info[key]);
 }
 
+// функция выполняет проверку на то, свободна ли комната, которую хотят забронировать
+// true - комната уже занята
 function checking_for_reservations(new_info, current_booked) {
     const f_tower = found_booked(new_info, current_booked, 'tower');
     if (f_tower.length > 0) {
@@ -110,6 +113,8 @@ function checking_for_reservations(new_info, current_booked) {
         return false;
 }
 
+// добавление в локальное хранилище (необходимо для того, чтобы в дальнейшем
+// проверить, свободна ли комната, которую хотят забронировать
 function add_to_LocalStorage(new_info, current_booked) {
     const updated_booked = [...current_booked, new_info];
     window.localStorage.setItem('booked', JSON.stringify(updated_booked));
