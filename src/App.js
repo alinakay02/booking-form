@@ -3,6 +3,8 @@ import {useState} from "react";
 import {min_date, max_date} from "./mm_date";
 
 function ToTower() {
+    let tower = React.createRef();
+
     const arr_towers = ['', 'А', 'Б'];
     const [value, setValue] = useState('');
     const options = arr_towers.map((text, index) => {
@@ -10,7 +12,7 @@ function ToTower() {
     });
 
     return (
-        <select name="select_tower" id="tower" value={value} onChange={(event) =>
+        <select name="select_tower" id="tower" value={value} ref={tower} onChange={(event) =>
             setValue(event.target.value)}>
             {options}
         </select>
@@ -18,6 +20,7 @@ function ToTower() {
 }
 
 class Tower extends React.Component {
+
     render() {
         return (
             <>

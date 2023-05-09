@@ -119,4 +119,3 @@ const buttons = document.querySelector('.buttons');
 buttons.addEventListener('click', actions);
 
 window.localStorage.setItem('booked', JSON.stringify([]));
-
